@@ -272,3 +272,9 @@ mat-toolbar {
   padding: 20px;
 }
 
+.fab-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; /* Para garantir que ele fique acima de outros elementos */
+}

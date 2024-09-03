@@ -7,8 +7,9 @@ import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
+import { CadastroProdutoComponent } from '../cadastro-produto/cadastro-produto.component';
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -28,7 +29,21 @@ import { CommonModule } from '@angular/common';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent {
+  constructor(public dialog: MatDialog) {}
+
+  openCadastroProduto() {
+    const dialogRef = this.dialog.open(CadastroProdutoComponent, {
+      width: '600px',
+      disableClose: true, // Impede que o modal seja fechado clicando fora dele
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('O diálogo foi fechado');
+      // Lógica adicional após o fechamento, se necessário
+    });
+  }
+
   @ViewChild('drawer') drawer!: MatSidenav;
 
   cartItems = [

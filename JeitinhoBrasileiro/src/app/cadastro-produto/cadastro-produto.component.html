@@ -1,50 +1,51 @@
-<app-header></app-header>
 <div class="product-form-container">
-    <h2>Cadastrar Produto</h2>
-    
-    <form (ngSubmit)="onSubmit()">
-      <!-- Nome do Produto -->
-      <mat-form-field class="full-width">
-        <mat-label>Nome do Produto</mat-label>
-        <input matInput placeholder="Nome do Produto" name="name" ngModel required>
-      </mat-form-field>
+  <h2>Cadastrar Produto</h2>
   
-      <!-- Descrição -->
-      <mat-form-field class="full-width">
-        <mat-label>Descrição</mat-label>
-        <textarea matInput placeholder="Descrição" name="description" ngModel required></textarea>
-      </mat-form-field>
+  <button mat-icon-button class="close-button" (click)="close()">
+    <mat-icon>close</mat-icon>
+  </button>
   
-      <!-- Preço -->
-      <mat-form-field class="full-width">
-        <mat-label>Preço</mat-label>
-        <input matInput type="number" placeholder="Preço" name="price" ngModel required>
-      </mat-form-field>
-  
-      <!-- Categoria -->
-      <mat-form-field class="full-width">
-        <mat-label>Categoria</mat-label>
-        <mat-select name="category" ngModel required>
-          <mat-option *ngFor="let category of categories" [value]="category">
-            {{ category }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
-  
-      <!-- Imagem do Produto -->
-      <div class="image-upload">
-        <label for="file-input">
-          <mat-icon>cloud_upload</mat-icon> Carregar Imagem
-        </label>
-        <input id="file-input" type="file" (change)="onFileSelected($event)" required>
-      </div>
-  
-      <!-- Botões -->
-      <div class="form-buttons">
-        <button mat-raised-button color="primary" type="submit">Cadastrar</button>
-        <button mat-button color="warn" type="reset">Limpar</button>
-      </div>
-    </form>
-  </div>
-  
-<app-footer></app-footer>
+  <form (ngSubmit)="onSubmit()">
+    <!-- Nome do Produto -->
+    <mat-form-field class="full-width">
+      <mat-label>Nome do Produto</mat-label>
+      <input matInput placeholder="Nome do Produto" name="name" ngModel required>
+    </mat-form-field>
+
+    <!-- Descrição -->
+    <mat-form-field class="full-width">
+      <mat-label>Descrição</mat-label>
+      <textarea matInput placeholder="Descrição" name="description" ngModel required></textarea>
+    </mat-form-field>
+
+    <!-- Preço -->
+    <mat-form-field class="full-width">
+      <mat-label>Preço</mat-label>
+      <input matInput type="number" placeholder="Preço" name="price" ngModel required>
+    </mat-form-field>
+
+    <!-- Categoria -->
+    <mat-form-field class="full-width">
+      <mat-label>Categoria</mat-label>
+      <mat-select name="category" ngModel required>
+        <mat-option *ngFor="let category of categories" [value]="category">
+          {{ category }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!-- Imagem do Produto -->
+    <div class="image-upload">
+      <label for="file-input">
+        <mat-icon>cloud_upload</mat-icon> Carregar Imagem
+      </label>
+      <input id="file-input" type="file" (change)="onFileSelected($event)" required>
+    </div>
+
+    <!-- Botões -->
+    <div class="form-buttons">
+      <button mat-raised-button color="primary" type="submit">Cadastrar</button>
+      <button mat-button color="warn" type="reset">Limpar</button>
+    </div>
+  </form>
+</div>
