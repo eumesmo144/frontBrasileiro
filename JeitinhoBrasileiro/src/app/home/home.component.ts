@@ -8,10 +8,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, 
+  imports: [CommonModule,
+    HeaderComponent, 
     FooterComponent, 
     RouterOutlet, 
     MatIconModule,  
@@ -21,9 +23,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatListModule,
     MatToolbarModule,
     MatDialogModule,
-    MatSidenavModule,
-
-  ],
+    MatSidenavModule
+    ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -42,7 +43,7 @@ export class HomeComponent implements AfterViewInit {
 
   openCart() {
     if (this.drawer) {
-      this.drawer.toggle(); // Abre ou fecha o drawer
+      this.drawer.toggle();
     } else {
       console.error('Drawer não está inicializado!');
     }

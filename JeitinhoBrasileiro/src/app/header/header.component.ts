@@ -1,23 +1,24 @@
-import { Component, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, ViewChild, Output, EventEmitter, NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { FooterComponent } from '../footer/footer.component';
 import { RouterOutlet } from '@angular/router';
 import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
-import { MatListModule } from '@angular/material/list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [HeaderComponent, 
+  imports: [
+    CommonModule,
+    HeaderComponent, 
     FooterComponent, 
     RouterOutlet, 
     MatIconModule,  
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule,
     MatToolbarModule,
     MatDialogModule],
   templateUrl: './header.component.html',
