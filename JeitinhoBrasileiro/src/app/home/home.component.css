@@ -251,3 +251,24 @@
 .next {
   right: -60px;
 }
+.example-container {
+  height: 100%;
+}
+
+.example-sidenav {
+  width: 350px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  padding: 20px;
+}
+
