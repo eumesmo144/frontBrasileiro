@@ -42,4 +42,8 @@
     background-color: #f8f9fa; /* Cor de fundo do conteúdo */
     width: 100%;
     margin: 0;
+
+    flex-grow: 1;
+    box-sizing: border-box;
+    
   }

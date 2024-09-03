@@ -8,8 +8,21 @@
   color: white;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+}
+
 .logo img {
   height: 60px;
+  margin-right: 10px; /* Espaço entre a logo e o texto */
+}
+
+.branding {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
 }
 
 .search-bar {
@@ -65,18 +78,18 @@
 /* Estilo para o subheader */
 .subheader {
   display: flex;
-  justify-content: center; /* Centraliza os botões no subheader */
-  background-color: #4e3d96; /* Mesma cor do header */
+  justify-content: center;
+  background-color: #4e3d96;
   padding: 10px;
-  border-top: 1px solid white; /* Linha branca separando o header do subheader */
+  border-top: 1px solid white;
 }
 
 .subheader button {
-  margin: 0 15px; /* Espaçamento entre os botões */
-  color: white;
+  margin: 0 15px;
+  color: rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .subheader button:hover {
-  background-color: #6a4ec3; /* Cor de fundo ao passar o mouse */
+  background-color: #6a4ec3;
 }
